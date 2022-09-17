@@ -3707,7 +3707,7 @@ sun.misc.Launcher$ExtClassLoader@29453f44
 
 #### 3) 双亲委派模式
 
-所谓的双亲委派，就是指调用类加载器的 loadClass 方法时，查找类的规则  
+所谓的双亲委派，就是指调用类加载器的 loadClass 方法时，查找类的规则
 
 > **注意**
 >
