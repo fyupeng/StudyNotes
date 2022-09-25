@@ -1838,6 +1838,8 @@ offset_delta = 4
 
 ### 6.5 原理之 synchronized 进阶  
 
+![synchronized锁升级](https://yupeng-tuchuang.oss-cn-shenzhen.aliyuncs.com/synchronized%E9%94%81%E5%8D%87%E7%BA%A7.png)
+
 #### 轻量级锁
 
 轻量即锁的使用场景，如果一个对象虽然有多线程访问，但多线程访问的时间是错开的 (也就是没有竞争)，那么可以使用轻量级锁来优化。
@@ -2051,9 +2053,9 @@ class Dog {}
 ```
 
 ```java
-// 添加虚拟机参数 -XX:BiasedLockingStartupDelay=0	
+// 第一种方式：添加虚拟机参数 -XX:BiasedLockingStartupDelay=0	
 //没有 延迟等待的话。就看不到 偏向锁的效果
-Thread.sleep(4000);
+//第二种方式：Thread.sleep(4000);
 
 Dog d = new Dog();
 
@@ -2079,8 +2081,9 @@ new Thread(() -> {
 有了偏向锁后
 
 ```java
-// 添加虚拟机参数 -XX:BiasedLockingStartupDelay=0	
+// 第一种方式：添加虚拟机参数 -XX:BiasedLockingStartupDelay=0	
 //没有 延迟等待的话。就看不到 偏向锁的效果
+// 第二种方式：
 Thread.sleep(4000);
 
 Dog d = new Dog();
