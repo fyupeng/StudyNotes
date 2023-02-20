@@ -402,6 +402,17 @@ cust10|1050.000
 cust1|104.000
 ```
 
+#### 解法
+
+```sql
+select cust_id, sum(item_price * quantity) as total_ordered
+from OrderItems oi
+inner join Orders o
+on oi.order_num = o.order_num
+group by cust_id
+order by sum(item_price * quantity) desc
+```
+
 ### 5. **SQL100** **确定最佳顾客的另一种方式（二）**
 
 #### 描述

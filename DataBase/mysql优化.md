@@ -281,7 +281,7 @@ select * from linelock; -- 允许读操作
 
 ![image-20220516143954112](https://yupeng-tuchuang.oss-cn-shenzhen.aliyuncs.com/image-20220516143954112.png)
 
-> 注意：读当前会话刚插入的数据时其他会话是不可见的，因为未提交
+> 注意：读当前会话刚插入的数据时其他会话是不可见的，因为未提交（当前读不会产生ReadView，会创建事务id，大于其他会话的最大事务id）
 
 ```sql
 update linelock set name='77' where id = 8; -- 行上锁，等待写操作,直到当前会话commit/rollback

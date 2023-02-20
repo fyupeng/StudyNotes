@@ -50,6 +50,15 @@ function urltoBase64(url, callback) {
 }
 ```
 
+文件图片转Base64
+
+```js
+upload(file) {
+    var content = file.content;
+    var fmg = content.replace(/^data:image\/\w+;base64,/, "");
+}
+```
+
 
 
 ## 2. 时间校验和对象转换

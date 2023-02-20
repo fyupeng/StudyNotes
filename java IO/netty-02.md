@@ -219,7 +219,7 @@ Netty is an asynchronous event-driven network application framework for rapid de
 
 Netty主要基于主从 `Reactors` 多线程模型（如图）做了一定的改进，其中主从 `Reactor` 多线程模型有多个 `Reactor` 
 
-![image-20220210165908913](https://yupeng-tuchuang.oss-cn-shenzhen.aliyuncs.com/image-20220210165908913.png)
+![ ](https://yupeng-tuchuang.oss-cn-shenzhen.aliyuncs.com/image-20220210165908913.png)
 
 **对上图说明**
 
