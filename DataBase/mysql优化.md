@@ -366,7 +366,7 @@ show status like '%innodb_row_lock%';
 
 # 三、 慢查询日志和海量数据分析
 
-MySQL提供一种日志记录，用于记录MYSQL 响应时间超过阈值的SQL 语句 (slow_query_log)
+`MySQL`提供一种日志记录，用于记录`MYSQL` 响应时间超过阈值的`SQL` 语句 (slow_query_log)
 
 ## 1. 慢查询日志：
 
@@ -437,7 +437,7 @@ log_bin_trust_function_creators=1
 ### 2.2 使用存储过程插入海量元素：
 
 ```sql
-create table dept
+ecreate table dept
 (
 	dno int(5) primary key default 0,
 	dname varchar(20) not null default '',

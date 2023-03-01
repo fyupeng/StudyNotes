@@ -433,3 +433,35 @@ mvn versions:set -DnewVersion=1.0.0
      </profile>
 ```
 
+### 12. 其他仓库
+
+```xml
+<!-- 阿里云maven仓库 -->
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>public2</id>
+            <name>jabylon</name>
+            <url>http://www.jabylon.org/maven/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>public3</id>
+            <name>jahia</name>
+            <url>http://maven.jahia.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+```
+
