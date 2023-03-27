@@ -586,10 +586,10 @@ mysql> show master status;
 
 ```sql
 CHANGE MASTER TO 
-MASTER_HOST='192.168.10.1, # 主从不在同一网段，可以配公网，主数据库提供 同步的用户至少 rep@'本机IP' 或 rep@'%'
+MASTER_HOST='47.107.63.171', # 主从不在同一网段，可以配公网，主数据库提供 同步的用户至少 rep@'本机IP' 或 rep@'%'
 MASTER_USER='rep', 
 MASTER_PASSWORD='123456', 
-MASTER_LOG_FILE='mysql-bin.00001', # 对应持久化数据文件位置，一般由 mysql-bin.** 和 mysql-bin.index 控制
+MASTER_LOG_FILE='master-log-bin.000003', # 对应持久化数据文件位置，一般由 mysql-bin.** 和 mysql-bin.index 控制
 MASTER_LOG_POS=1282;
 ```
 
